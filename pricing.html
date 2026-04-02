@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | Null Bugs</title>
+    <meta name="description" content="Simple, transparent pricing for Null Bugs web and software development services.">
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .pricing-card {
+            text-align: center;
+            padding: 3rem 2rem;
+            position: relative;
+        }
+        
+        .pricing-card.popular {
+            border-color: var(--accent);
+            box-shadow: 0 15px 40px rgba(79, 70, 229, 0.15);
+            background: var(--surface-color-light);
+            transform: scale(1.05);
+            z-index: 2;
+        }
+        .pricing-card.popular:hover {
+            transform: scale(1.05) translateY(-5px);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: #000;
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .price {
+            font-size: 3rem;
+            font-family: var(--font-heading);
+            font-weight: 800;
+            margin: 1.5rem 0;
+            color: var(--text-main);
+        }
+        .price span {
+            font-size: 1rem;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        .features-list {
+            margin: 2rem 0;
+            text-align: left;
+        }
+        .features-list li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        .features-list i {
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+        
+        @media (max-width: 992px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            .pricing-card.popular {
+                transform: scale(1);
+            }
+            .pricing-card.popular:hover {
+                transform: translateY(-5px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container navbar-inner">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Null Bugs Logo" class="logo-img"> <span class="logo-null">Null</span><span class="logo-bugs">Bugs</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                <li><a href="https://wa.link/3td1gr" target="_blank" class="nav-link btn-nav">Get in Touch</a></li>
+            </ul>
+            <button class="mobile-toggle">
+                <i class='bx bx-menu'></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container fade-up">
+            <div class="badge">Pricing Plans</div>
+            <h1>Simple, <span class="text-gradient">Transparent</span> Pricing</h1>
+            <p style="max-width: 600px; margin: 0 auto; font-size: 1.1rem;">Choose the right plan to elevate your digital presence. No hidden fees.</p>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section">
+        <div class="container">
+            <div class="pricing-grid">
+                <!-- Basic Plan -->
+                <div class="card pricing-card fade-up">
+                    <h3>Starter</h3>
+                    <p>Perfect for small businesses establishing their online presence.</p>
+                    <div class="price">$999<span>/project</span></div>
+                    <ul class="features-list">
+                        <li><i class='bx bx-check'></i> 5-Page Responsive Website</li>
+                        <li><i class='bx bx-check'></i> Basic SEO Setup</li>
+                        <li><i class='bx bx-check'></i> Contact Form Integration</li>
+                        <li><i class='bx bx-check'></i> 1 Month Free Support</li>
+                    </ul>
+                    <a href="https://wa.link/qd15ty" class="btn btn-outline" style="width: 100%;">Get Started</a>
+                </div>
+
+                <!-- Pro Plan (Popular) -->
+                <div class="card pricing-card popular fade-up" style="transition-delay: 0.1s;">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3>Professional</h3>
+                    <p>Ideal for growing companies needing advanced features.</p>
+                    <div class="price">$2,499<span>/project</span></div>
+                    <ul class="features-list">
+                        <li><i class='bx bx-check'></i> Custom UI/UX Design</li>
+                        <li><i class='bx bx-check'></i> Up to 15 Pages</li>
+                        <li><i class='bx bx-check'></i> CMS Integration</li>
+                        <li><i class='bx bx-check'></i> Advanced Animations</li>
+                        <li><i class='bx bx-check'></i> 3 Months Free Support</li>
+                    </ul>
+                    <a href="https://wa.link/qd15ty" class="btn btn-primary" style="width: 100%;">Get Started</a>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="card pricing-card fade-up" style="transition-delay: 0.2s;">
+                    <h3>Enterprise</h3>
+                    <p>Full-scale web apps and software for large organizations.</p>
+                    <div class="price">Custom</div>
+                    <ul class="features-list">
+                        <li><i class='bx bx-check'></i> Complex Web/Mobile Apps</li>
+                        <li><i class='bx bx-check'></i> Custom Backend Systems</li>
+                        <li><i class='bx bx-check'></i> API Integrations</li>
+                        <li><i class='bx bx-check'></i> Dedicated Project Manager</li>
+                        <li><i class='bx bx-check'></i> 24/7 Priority Support</li>
+                    </ul>
+                    <a href="https://calendar.app.google/tfRWBZpxphkRM7Uk7" class="btn btn-outline" style="width: 100%;">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo footer-logo">
+                        <img src="images/logo.png" alt="Null Bugs Logo" class="logo-img"> <span class="logo-null">Null</span><span class="logo-bugs">Bugs</span>
+                    </a>
+                    <p>We are your trusted partner every step of the way, delivering tailored digital solutions.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <div class="footer-contact">
+                        <a href="index.html"><i class='bx bx-envelope'></i> contact@nullbugs.com</a>
+                        <a href="https://wa.link/3td1gr" target="_blank"><i class='bx bx-phone'></i> +91 9947977067</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Address</h4>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Null+Bugs+Namaskar+Building+SN+Junction+Palarivattom+Ernakulam" target="_blank" class="footer-address-link">
+                        Null Bugs 2nd Floor, Namaskar Building, SN Junction, Sonia Nagar, Palarivattom, Ernakulam, Kerala - 682025
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <script>document.write(new Date().getFullYear());</script> Null Bugs | All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.link/3td1gr" class="whatsapp-float" target="_blank">
+        <i class='bx bxl-whatsapp'></i>
+    </a>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
